@@ -1,2 +1,2 @@
 # hive_tests
-testing hive
+testing hive concepts
