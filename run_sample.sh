@@ -1,11 +1,11 @@
 
-hadoop fs -mkdir mytest
-hadoop fs -put users.csv mytest/
+hadoop fs -mkdir testdb
+hadoop fs -put users.csv testdb/
 
 hive -e "
 
-create database if not exists mytest;
-use mytest;
+create database if not exists testdb;
+use testdb;
 
 drop table if exists user;
 
@@ -28,6 +28,6 @@ create external table if not exists user (
 ;
 
 
-load data inpath '/user/cloudera/mytest/users.csv' overwrite into TABLE user;
+load data inpath '/user/cloudera/testdb/users.csv' overwrite into TABLE user;
 "
 
