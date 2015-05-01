@@ -18,4 +18,5 @@ create table if not exists user (
   hour string  
   )
 ;
+load data inpath '/user/cloudera/mytest/users.csv' overwrite into TABLE user;
 "
